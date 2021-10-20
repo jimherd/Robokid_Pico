@@ -82,7 +82,7 @@ uint32_t  i, j, k;
         sleep_ms(200);
     }
 
-    sleep_ms(3000);
+    sleep_ms(3500);
     Oled_Image(truck_bmp);
 
     sleep_ms(5000);

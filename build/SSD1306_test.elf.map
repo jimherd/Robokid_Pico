@@ -991,9 +991,9 @@ Discarded input sections
                 0x00000000       0x50 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
  .time_critical.spi_read16_blocking
                 0x00000000       0x48 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
- .text          0x00000000        0x0 /tmp/ccSnKYFc.o
- .data          0x00000000        0x0 /tmp/ccSnKYFc.o
- .bss           0x00000000        0x0 /tmp/ccSnKYFc.o
+ .text          0x00000000        0x0 /tmp/ccmSZ5kC.o
+ .data          0x00000000        0x0 /tmp/ccmSZ5kC.o
+ .bss           0x00000000        0x0 /tmp/ccmSZ5kC.o
  .data          0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .text          0x00000000       0x10 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libc.a(lib_a-atexit.o)
@@ -1214,7 +1214,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
 .boot2          0x10000000      0x100
                 0x10000000                __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /tmp/ccSnKYFc.o
+ .boot2         0x10000000      0x100 /tmp/ccmSZ5kC.o
                 0x10000100                __boot2_end__ = .
                 0x00000001                ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
@@ -1281,336 +1281,335 @@ LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/crt0
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .text*)
  .text          0x100002c4       0x98 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
  .text.startup.main
-                0x1000035c      0x324 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj
+                0x1000035c      0x328 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj
                 0x1000035c                main
  .text.Oled_Pixel.part.0
-                0x10000680      0x118 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000684      0x118 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
  .text.Oled_Init
-                0x10000798      0x154 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000798                Oled_Init
+                0x1000079c      0x154 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x1000079c                Oled_Init
  .text.Oled_SetFont
-                0x100008ec       0x34 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x100008ec                Oled_SetFont
+                0x100008f0       0x34 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x100008f0                Oled_SetFont
  .text.Oled_WriteChar
-                0x10000920      0x154 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000920                Oled_WriteChar
+                0x10000924      0x154 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000924                Oled_WriteChar
  .text.Oled_ConstText
-                0x10000a74       0x2c CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000a74                Oled_ConstText
+                0x10000a78       0x2c CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000a78                Oled_ConstText
  .text.Oled_Text
-                0x10000aa0       0x2c CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000aa0                Oled_Text
+                0x10000aa4       0x2c CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000aa4                Oled_Text
  .text.Oled_ConstTextScroll
-                0x10000acc      0x18c CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000acc                Oled_ConstTextScroll
+                0x10000ad0      0x18c CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000ad0                Oled_ConstTextScroll
  .text.Oled_ResetScroll
-                0x10000c58       0x14 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000c58                Oled_ResetScroll
+                0x10000c5c       0x14 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000c5c                Oled_ResetScroll
  .text.Oled_FillScreen
-                0x10000c6c       0xcc CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000c6c                Oled_FillScreen
+                0x10000c70       0xcc CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000c70                Oled_FillScreen
  .text.Oled_Image
-                0x10000d38       0xfc CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000d38                Oled_Image
+                0x10000d3c       0xfc CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000d3c                Oled_Image
  .text.Oled_Icon
-                0x10000e34      0x114 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000e34                Oled_Icon
+                0x10000e38      0x114 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000e38                Oled_Icon
  .text.Oled_InvertRam
-                0x10000f48       0xfc CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10000f48                Oled_InvertRam
+                0x10000f4c       0xfc CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10000f4c                Oled_InvertRam
  .text.Oled_Line
-                0x10001044      0x1ec CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10001044                Oled_Line
+                0x10001048      0x1ec CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10001048                Oled_Line
  .text.Oled_Rectangle
-                0x10001230      0x124 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10001230                Oled_Rectangle
+                0x10001234      0x124 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10001234                Oled_Rectangle
  .text.Oled_Circle
-                0x10001354      0x170 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
-                0x10001354                Oled_Circle
+                0x10001358      0x170 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+                0x10001358                Oled_Circle
  .text.gpio_set_function
-                0x100014c4       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x100014c4                gpio_set_function
+                0x100014c8       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x100014c8                gpio_set_function
  .text.gpio_init
-                0x100014f4       0x3c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x100014f4                gpio_init
+                0x100014f8       0x3c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x100014f8                gpio_init
  .text.hw_claim_or_assert
-                0x10001530       0x44 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
-                0x10001530                hw_claim_or_assert
+                0x10001534       0x44 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
+                0x10001534                hw_claim_or_assert
  .text.running_on_fpga
-                0x10001574       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
-                0x10001574                running_on_fpga
+                0x10001578       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj
+                0x10001578                running_on_fpga
  .text.spin_locks_reset
-                0x10001584       0x1c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x10001584                spin_locks_reset
+                0x10001588       0x1c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x10001588                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x100015a0       0x18 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
-                0x100015a0                next_striped_spin_lock_num
+                0x100015a4       0x18 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj
+                0x100015a4                next_striped_spin_lock_num
  .text.timer_pool_entry_comparator
-                0x100015b8       0x34 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x100015b8                timer_pool_entry_comparator
+                0x100015bc       0x34 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100015bc                timer_pool_entry_comparator
  .text.sleep_until_callback
-                0x100015ec       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x100015f0       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.add_alarm_under_lock
-                0x1000161c      0x120 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001620      0x120 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x1000173c      0x1dc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001740      0x1dc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x10001918       0x64 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001918                alarm_pool_init_default
+                0x1000191c       0x64 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x1000191c                alarm_pool_init_default
  .text.sleep_until
-                0x1000197c      0x1ec CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x1000197c                sleep_until
+                0x10001980      0x1ec CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001980                sleep_until
  .text.sleep_us
-                0x10001b68       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001b68                sleep_us
+                0x10001b6c       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001b6c                sleep_us
  .text.sleep_ms
-                0x10001b98       0x38 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
-                0x10001b98                sleep_ms
+                0x10001b9c       0x38 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj
+                0x10001b9c                sleep_ms
  .text.hardware_alarm_irq_handler
-                0x10001bd0       0xb0 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001bd4       0xb0 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x10001c80       0x18 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001c80                hardware_alarm_claim
+                0x10001c84       0x18 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001c84                hardware_alarm_claim
  .text.time_us_64
-                0x10001c98       0x18 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001c98                time_us_64
+                0x10001c9c       0x18 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001c9c                time_us_64
  .text.busy_wait_until
-                0x10001cb0       0x20 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001cb0                busy_wait_until
+                0x10001cb4       0x20 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001cb4                busy_wait_until
  .text.hardware_alarm_set_callback
-                0x10001cd0       0x8c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001cd0                hardware_alarm_set_callback
+                0x10001cd4       0x8c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001cd4                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10001d5c       0xd8 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001d5c                hardware_alarm_set_target
+                0x10001d60       0xd8 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001d60                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10001e34       0x40 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001e34                hardware_alarm_cancel
+                0x10001e38       0x40 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001e38                hardware_alarm_cancel
  .text.lock_init
-                0x10001e74       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
-                0x10001e74                lock_init
+                0x10001e78       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj
+                0x10001e78                lock_init
  .text.mutex_init
-                0x10001e84       0x1c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10001e84                mutex_init
+                0x10001e88       0x1c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10001e88                mutex_init
  .text.recursive_mutex_init
-                0x10001ea0       0x1c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
-                0x10001ea0                recursive_mutex_init
+                0x10001ea4       0x1c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj
+                0x10001ea4                recursive_mutex_init
  .text.ph_merge_two_pass.part.3
-                0x10001ebc       0xcc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001ec0       0xcc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
  .text.ph_post_alloc_init
-                0x10001f88       0x3c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001f88                ph_post_alloc_init
+                0x10001f8c       0x3c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001f8c                ph_post_alloc_init
  .text.ph_remove_head
-                0x10001fc4      0x158 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x10001fc4                ph_remove_head
+                0x10001fc8      0x158 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10001fc8                ph_remove_head
  .text.ph_remove_and_free_node
-                0x1000211c      0x340 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
-                0x1000211c                ph_remove_and_free_node
+                0x10002120      0x340 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj
+                0x10002120                ph_remove_and_free_node
  .text.runtime_init
-                0x1000245c      0x100 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x1000245c                runtime_init
- .text.exit     0x1000255c        0x4 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x1000255c                exit
- .text.panic    0x10002560       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002560                panic
+                0x10002460      0x100 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002460                runtime_init
+ .text.exit     0x10002560        0x4 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002560                exit
+ .text.panic    0x10002564       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002564                panic
  .text.hard_assertion_failure
-                0x10002590        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002590                hard_assertion_failure
+                0x10002594        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002594                hard_assertion_failure
  .text.clocks_init
-                0x1000259c      0x2c8 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x1000259c                clocks_init
+                0x100025a0      0x2c8 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x100025a0                clocks_init
  .text.clock_get_hz
-                0x10002864        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10002864                clock_get_hz
+                0x10002868        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10002868                clock_get_hz
  .text.irq_set_enabled
-                0x10002870       0x24 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002870                irq_set_enabled
+                0x10002874       0x24 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002874                irq_set_enabled
  .text.irq_get_vtable_handler
-                0x10002894       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002894                irq_get_vtable_handler
+                0x10002898       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002898                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x100028a4       0x54 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100028a4                irq_set_exclusive_handler
+                0x100028a8       0x54 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100028a8                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x100028f8      0x1bc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x100028f8                irq_remove_handler
+                0x100028fc      0x1bc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x100028fc                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10002ab4       0xb4 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002ab4                irq_add_tail_to_free_list
+                0x10002ab8       0xb4 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002ab8                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x10002b68       0x38 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
-                0x10002b68                irq_init_priorities
+                0x10002b6c       0x38 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj
+                0x10002b6c                irq_init_priorities
  .text.pll_init
-                0x10002ba0       0xa4 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
-                0x10002ba0                pll_init
+                0x10002ba4       0xa4 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj
+                0x10002ba4                pll_init
  .text.watchdog_start_tick
-                0x10002c44       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x10002c44                watchdog_start_tick
+                0x10002c48       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002c48                watchdog_start_tick
  .text.xosc_init
-                0x10002c54       0x28 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x10002c54                xosc_init
+                0x10002c58       0x28 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x10002c58                xosc_init
  .text._out_buffer
-                0x10002c7c        0x8 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002c80        0x8 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_null
-                0x10002c84        0x4 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002c88        0x4 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._out_char
-                0x10002c88        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002c8c        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x10002c94      0x270 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002c98      0x270 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._etoa.part.0
-                0x10002f04      0x56c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x10003470      0x6f8 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10002f08      0x56c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x10003474      0x6f8 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._ftoa.part.1
-                0x10003b68      0x54c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10003b6c      0x54c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x100040b4     0x11e0 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100040b8     0x11e0 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
  .text.__wrap_sprintf
-                0x10005294       0x28 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x10005294                __wrap_sprintf
+                0x10005298       0x28 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x10005298                __wrap_sprintf
  .text.weak_raw_vprintf
-                0x100052bc       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
-                0x100052bc                weak_raw_vprintf
- .text          0x100052ec       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x100052c0       0x30 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj
+                0x100052c0                weak_raw_vprintf
+ .text          0x100052f0       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x100052fc       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x100052fc                rom_func_lookup
+                0x10005300       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10005300                rom_func_lookup
  .text.rom_data_lookup
-                0x1000530c       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x1000530c                rom_data_lookup
+                0x10005310       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10005310                rom_data_lookup
  .text.rom_funcs_lookup
-                0x1000531c       0x3c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x1000531c                rom_funcs_lookup
+                0x10005320       0x3c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x10005320                rom_funcs_lookup
  .text.__wrap___aeabi_idiv
-                0x10005358       0x50 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x10005358                __wrap___aeabi_idivmod
-                0x10005358                divmod_s32s32
-                0x10005358                div_s32s32
-                0x10005358                __wrap___aeabi_idiv
-                0x10005360                divmod_s32s32_unsafe
-                0x1000538c                divmod_s32s32_savestate
+                0x1000535c       0x50 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x1000535c                __wrap___aeabi_idivmod
+                0x1000535c                divmod_s32s32
+                0x1000535c                div_s32s32
+                0x1000535c                __wrap___aeabi_idiv
+                0x10005364                divmod_s32s32_unsafe
+                0x10005390                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x100053a8       0x4c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x100053a8                __wrap___aeabi_uidiv
-                0x100053a8                __wrap___aeabi_uidivmod
-                0x100053a8                div_u32u32
-                0x100053a8                divmod_u32u32
-                0x100053b0                divmod_u32u32_unsafe
-                0x100053d8                divmod_u32u32_savestate
+                0x100053ac       0x4c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x100053ac                __wrap___aeabi_uidiv
+                0x100053ac                __wrap___aeabi_uidivmod
+                0x100053ac                div_u32u32
+                0x100053ac                divmod_u32u32
+                0x100053b4                divmod_u32u32_unsafe
+                0x100053dc                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x100053f4      0x430 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
-                0x100053f4                div_s64s64
-                0x100053f4                divmod_s64s64
-                0x100053f4                __wrap___aeabi_ldivmod
-                0x1000542c                div_u64u64
-                0x1000542c                divmod_u64u64
-                0x1000542c                __wrap___aeabi_uldivmod
-                0x1000543c                divmod_u64u64_savestate
-                0x10005464                divmod_s64s64_unsafe
-                0x100054ec                divmod_u64u64_unsafe
+                0x100053f8      0x430 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj
+                0x100053f8                div_s64s64
+                0x100053f8                divmod_s64s64
+                0x100053f8                __wrap___aeabi_ldivmod
+                0x10005430                div_u64u64
+                0x10005430                divmod_u64u64
+                0x10005430                __wrap___aeabi_uldivmod
+                0x10005440                divmod_u64u64_savestate
+                0x10005468                divmod_s64s64_unsafe
+                0x100054f0                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x10005824       0x80 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10005824                __wrap___aeabi_drsub
-                0x1000582a                __wrap___aeabi_dsub
-                0x1000583c                __wrap___aeabi_dadd
-                0x1000584e                __wrap___aeabi_ddiv
-                0x1000588a                __wrap___aeabi_dmul
+                0x10005828       0x80 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005828                __wrap___aeabi_drsub
+                0x1000582e                __wrap___aeabi_dsub
+                0x10005840                __wrap___aeabi_dadd
+                0x10005852                __wrap___aeabi_ddiv
+                0x1000588e                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x100058a4       0x6c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100058a4                __wrap___aeabi_cdrcmple
-                0x100058b4                __wrap___aeabi_cdcmple
-                0x100058b4                __wrap___aeabi_cdcmpeq
+                0x100058a8       0x6c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100058a8                __wrap___aeabi_cdrcmple
+                0x100058b8                __wrap___aeabi_cdcmple
+                0x100058b8                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x10005910        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10005910                __wrap___aeabi_dcmplt
+                0x10005914        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005914                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmpge
-                0x1000591c       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000591c                __wrap___aeabi_dcmpge
+                0x10005920       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005920                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x1000592c        0xa CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000592c                __wrap___aeabi_dcmpgt
+                0x10005930        0xa CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005930                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x10005936       0x1c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10005936                __wrap___aeabi_dcmpun
- *fill*         0x10005952        0x2 
+                0x1000593a       0x1c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x1000593a                __wrap___aeabi_dcmpun
+ *fill*         0x10005956        0x2 
  .text.__wrap___aeabi_i2d
-                0x10005954       0x38 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10005954                __wrap___aeabi_ui2d
-                0x1000595c                __wrap___aeabi_i2d
+                0x10005958       0x38 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005958                __wrap___aeabi_ui2d
+                0x10005960                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x1000598c       0x48 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x1000598c                __wrap___aeabi_d2iz
-                0x1000598c                double2int_z
+                0x10005990       0x48 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10005990                __wrap___aeabi_d2iz
+                0x10005990                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x100059d4       0x18 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x100059d4                double2uint
-                0x100059d4                __wrap___aeabi_d2uiz
+                0x100059d8       0x18 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x100059d8                double2uint
+                0x100059d8                __wrap___aeabi_d2uiz
  .text.__aeabi_double_init
-                0x100059ec       0x4c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x100059ec                __aeabi_double_init
+                0x100059f0       0x4c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x100059f0                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10005a38       0x2c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005a38                double_table_shim_on_use_helper
+                0x10005a3c       0x2c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005a3c                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x10005a64       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005a64                drsub_shim
-                0x10005a6a                dsub_shim
+                0x10005a68       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005a68                drsub_shim
+                0x10005a6e                dsub_shim
  .text.dadd_shim
-                0x10005a74      0x15c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005a74                dadd_shim
+                0x10005a78      0x15c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005a78                dadd_shim
  .text.dmul_shim
-                0x10005bd0      0x15c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005bd0                dmul_shim
+                0x10005bd4      0x15c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005bd4                dmul_shim
  .text.ddiv_shim
-                0x10005d2c      0x1b0 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005d2c                ddiv_shim
+                0x10005d30      0x1b0 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005d30                ddiv_shim
  .text.dcordic_rot_step
-                0x10005edc       0x7c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005edc                dcordic_rot_step
+                0x10005ee0       0x7c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005ee0                dcordic_rot_step
  .text.double2uint_shim
-                0x10005f58        0xe CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005f58                double2uint_shim
-                0x10005f5a                double2ufix_shim
- *fill*         0x10005f66        0x2 
+                0x10005f5c        0xe CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005f5c                double2uint_shim
+                0x10005f5e                double2ufix_shim
+ *fill*         0x10005f6a        0x2 
  .text.double2uint64_shim
-                0x10005f68       0x6c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005f68                double2uint64_shim
-                0x10005f6a                double2ufix64_shim
-                0x10005f84                d2fix_a
+                0x10005f6c       0x6c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005f6c                double2uint64_shim
+                0x10005f6e                double2ufix64_shim
+                0x10005f88                d2fix_a
  .text.dunpacks
-                0x10005fd4       0x3c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10005fd4                dunpacks
+                0x10005fd8       0x3c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10005fd8                dunpacks
  .text.__aeabi_lmul
-                0x10006010       0x32 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10006010                __wrap___aeabi_lmul
- *fill*         0x10006042        0x2 
+                0x10006014       0x32 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x10006014                __wrap___aeabi_lmul
+ *fill*         0x10006046        0x2 
  .text.__aeabi_float_init
-                0x10006044       0x68 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x10006044                __aeabi_float_init
+                0x10006048       0x68 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10006048                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x100060ac       0x2c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x100060ac                float_table_shim_on_use_helper
- .text          0x100060d8       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x100060d8                __aeabi_mem_init
- .text.memcpy   0x100060e8        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x100060e8                __wrap___aeabi_memcpy
-                0x100060e8                __wrap_memcpy
+                0x100060b0       0x2c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x100060b0                float_table_shim_on_use_helper
+ .text          0x100060dc       0x10 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x100060dc                __aeabi_mem_init
+ .text.memcpy   0x100060ec        0xc CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x100060ec                __wrap___aeabi_memcpy
+                0x100060ec                __wrap_memcpy
  .text.stdio_out_chars_crlf.part.0
-                0x100060f4       0x8c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100060f8       0x8c CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
  .text.__wrap_putchar
-                0x10006180       0xb0 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10006180                __wrap_putchar
+                0x10006184       0xb0 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10006184                __wrap_putchar
  .text.__wrap_puts
-                0x10006230      0x120 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10006230                __wrap_puts
+                0x10006234      0x120 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10006234                __wrap_puts
  .text.spi_init
-                0x10006350       0xec CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-                0x10006350                spi_init
- .text          0x1000643c       0x64 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libc.a(lib_a-strlen-stub.o)
-                0x1000643c                strlen
+                0x10006354       0xec CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
+                0x10006354                spi_init
+ .text          0x10006440       0x64 /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libc.a(lib_a-strlen-stub.o)
+                0x10006440                strlen
  *(.fini)
- .fini          0x100064a0        0x4 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
-                0x100064a0                _fini
- *fill*         0x100064a4        0x4 
+ .fini          0x100064a4        0x4 /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crti.o
+                0x100064a4                _fini
  .fini.__stub   0x100064a8       0x60 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
@@ -1985,7 +1984,7 @@ LOAD CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stand
 LOAD CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 LOAD CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
-LOAD /tmp/ccSnKYFc.o
+LOAD /tmp/ccmSZ5kC.o
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libstdc++.a
 LOAD /usr/lib/gcc/arm-none-eabi/7.3.1/../../../arm-none-eabi/lib/thumb/v6-m/libm.a
 START GROUP
@@ -2076,7 +2075,7 @@ OUTPUT(SSD1306_test.elf elf32-littlearm)
  .ARM.attributes
                 0x0000061c       0x32 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj
  .ARM.attributes
-                0x0000064e       0x22 /tmp/ccSnKYFc.o
+                0x0000064e       0x22 /tmp/ccmSZ5kC.o
  .ARM.attributes
                 0x00000670       0x1e /usr/lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
