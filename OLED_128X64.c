@@ -155,7 +155,7 @@ void  Oled_Delay(void){
 }
 
 //==============================================================================
-// Resets the OLED module.
+// Resets the OLED module. Not available on SPI SSD1306 unit being used
 //==============================================================================
 void  Oled_Reset(void)
 {
@@ -187,7 +187,6 @@ void  Oled_Command_seq(const uint8_t *cmd_seq, uint32_t len)
     spi_write_blocking(SPI_PORT, cmd_seq, len);
     gpio_put(OLED_CS, 1);
 }
-
 
 //==============================================================================
 // Write a byte to RAM memory.
