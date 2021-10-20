@@ -1,0 +1,14 @@
+# Hashes of file build rules.
+49739313c8c42b3cc030d24b23333f6e CMakeFiles/ELF2UF2Build
+f9eaa4b6701825578054520999200048 CMakeFiles/ELF2UF2Build-complete
+96a67dc7b58d99ade823505b936a2c06 elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-build
+405777d9b37b6305b661aa235ce242c1 elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-configure
+b19f1b55f22d90026b638bc2bf23624e elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-download
+9fbe28e8f278a9ee57a94ab9387b527c elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-install
+c83b330d36a1039d2ba4f4c02c1f6298 elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-mkdir
+6b7ba945297084aaa24816960734ca45 elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-patch
+1a3d965ca613b4c8e1142fd67215e831 elf2uf2/src/ELF2UF2Build-stamp/ELF2UF2Build-update
+99ff7d879176104fca2d015d762b89b7 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin
+99ff7d879176104fca2d015d762b89b7 pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm
+0d51a907f4053dae1a0cdcd1b47d1ef9 pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+91ece7b1c775ccc5b8597243b187aba0 pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
