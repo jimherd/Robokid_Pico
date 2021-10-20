@@ -1,5 +1,5 @@
-build/*
-Archive/*
-.vscode/*
+.vscode
+build
+Archive
 
 
