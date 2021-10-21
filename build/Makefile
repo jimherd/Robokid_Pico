@@ -229,6 +229,33 @@ SSD1306_test.c.s:
 	$(MAKE) -f CMakeFiles/SSD1306_test.dir/build.make CMakeFiles/SSD1306_test.dir/SSD1306_test.c.s
 .PHONY : SSD1306_test.c.s
 
+TMC7300.obj: TMC7300.c.obj
+
+.PHONY : TMC7300.obj
+
+# target to build an object file
+TMC7300.c.obj:
+	$(MAKE) -f CMakeFiles/SSD1306_test.dir/build.make CMakeFiles/SSD1306_test.dir/TMC7300.c.obj
+.PHONY : TMC7300.c.obj
+
+TMC7300.i: TMC7300.c.i
+
+.PHONY : TMC7300.i
+
+# target to preprocess a source file
+TMC7300.c.i:
+	$(MAKE) -f CMakeFiles/SSD1306_test.dir/build.make CMakeFiles/SSD1306_test.dir/TMC7300.c.i
+.PHONY : TMC7300.c.i
+
+TMC7300.s: TMC7300.c.s
+
+.PHONY : TMC7300.s
+
+# target to generate assembly for a file
+TMC7300.c.s:
+	$(MAKE) -f CMakeFiles/SSD1306_test.dir/build.make CMakeFiles/SSD1306_test.dir/TMC7300.c.s
+.PHONY : TMC7300.c.s
+
 home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.obj: home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj
 
 .PHONY : home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.obj
@@ -1292,6 +1319,9 @@ help:
 	@echo "... SSD1306_test.obj"
 	@echo "... SSD1306_test.i"
 	@echo "... SSD1306_test.s"
+	@echo "... TMC7300.obj"
+	@echo "... TMC7300.i"
+	@echo "... TMC7300.s"
 	@echo "... home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.obj"
 	@echo "... home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.i"
 	@echo "... home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.s"

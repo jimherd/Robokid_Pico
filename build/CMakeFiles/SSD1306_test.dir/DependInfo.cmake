@@ -106,6 +106,7 @@ set(CMAKE_ASM_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_C
   "/home/pi/pico/jim-code/SSD_1306/OLED_128X64.c" "/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj"
   "/home/pi/pico/jim-code/SSD_1306/SSD1306_test.c" "/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj"
+  "/home/pi/pico/jim-code/SSD_1306/TMC7300.c" "/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles/SSD1306_test.dir/TMC7300.c.obj"
   "/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c" "/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
   "/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c" "/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
   "/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c" "/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"

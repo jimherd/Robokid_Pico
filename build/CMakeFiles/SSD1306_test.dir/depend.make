@@ -198,6 +198,9 @@ CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: /home/pi/pico/pico-sdk/src/rp2_c
 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: generated/pico_base/pico/config_autogen.h
 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: generated/pico_base/pico/version.h
 
+CMakeFiles/SSD1306_test.dir/TMC7300.c.obj: ../TMC7300.c
+CMakeFiles/SSD1306_test.dir/TMC7300.c.obj: ../TMC7300.h
+
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico.h
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/assert.h

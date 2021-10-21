@@ -83,9 +83,22 @@ CMakeFiles/SSD1306_test.dir/OLED_128X64.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SSD1306_test.dir/OLED_128X64.c.s"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/jim-code/SSD_1306/OLED_128X64.c -o CMakeFiles/SSD1306_test.dir/OLED_128X64.c.s
 
+CMakeFiles/SSD1306_test.dir/TMC7300.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
+CMakeFiles/SSD1306_test.dir/TMC7300.c.obj: ../TMC7300.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SSD1306_test.dir/TMC7300.c.obj"
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/TMC7300.c.obj   -c /home/pi/pico/jim-code/SSD_1306/TMC7300.c
+
+CMakeFiles/SSD1306_test.dir/TMC7300.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SSD1306_test.dir/TMC7300.c.i"
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/pi/pico/jim-code/SSD_1306/TMC7300.c > CMakeFiles/SSD1306_test.dir/TMC7300.c.i
+
+CMakeFiles/SSD1306_test.dir/TMC7300.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SSD1306_test.dir/TMC7300.c.s"
+	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/pi/pico/jim-code/SSD_1306/TMC7300.c -o CMakeFiles/SSD1306_test.dir/TMC7300.c.s
+
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/std
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/g
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/platform.c.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_platform/p
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/sync.c.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_sync/s
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/uart.c.i: cmake_force
@@ -163,12 +176,12 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_uart/u
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj: /home/pi/pico/pico-sdk/src/common/pico_time/time.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_time/time.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.i: cmake_force
@@ -181,7 +194,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/time.c.s:
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj: /home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_helper.c.i: cmake_force
@@ -194,7 +207,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_time/timeout_h
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/timer.c.i: cmake_force
@@ -207,7 +220,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_timer/
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj: /home/pi/pico/pico-sdk/src/common/pico_sync/sem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/sem.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.i: cmake_force
@@ -220,7 +233,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/sem.c.s: 
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj: /home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.i: cmake_force
@@ -233,7 +246,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj: /home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.i: cmake_force
@@ -246,7 +259,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.s
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj: /home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.i: cmake_force
@@ -259,7 +272,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj: /home/pi/pico/pico-sdk/src/common/pico_util/datetime.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_util/datetime.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.c.i: cmake_force
@@ -272,7 +285,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/datetime.
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj: /home/pi/pico/pico-sdk/src/common/pico_util/pheap.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_util/pheap.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.i: cmake_force
@@ -285,7 +298,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/pheap.c.s
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj: /home/pi/pico/pico-sdk/src/common/pico_util/queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.obj   -c /home/pi/pico/pico-sdk/src/common/pico_util/queue.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.i: cmake_force
@@ -298,7 +311,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_util/queue.c.s
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/runtime.c.i: cmake_force
@@ -311,7 +324,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_runtime/ru
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.c.i: cmake_force
@@ -324,7 +337,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_clocks
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c.i: cmake_force
@@ -337,12 +350,12 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/ir
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_irq/irq_handler_chain.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pll.c.i: cmake_force
@@ -355,7 +368,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_pll/pl
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/vreg.c.i: cmake_force
@@ -368,7 +381,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_vreg/v
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchdog/watchdog.c.i: cmake_force
@@ -381,7 +394,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_watchd
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/xosc.c.i: cmake_force
@@ -394,7 +407,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_xosc/x
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/printf.c.i: cmake_force
@@ -407,12 +420,12 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_printf/pri
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bootrom.c.i: cmake_force
@@ -425,17 +438,17 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_bootrom/bo
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_divider/divider.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_aeabi.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_init_rom.c.i: cmake_force
@@ -448,7 +461,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/dou
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_math.c.i: cmake_force
@@ -461,22 +474,22 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/dou
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_double/double_v1_rom_shim.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_aeabi.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_init_rom.c.i: cmake_force
@@ -489,7 +502,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/floa
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_math.c.i: cmake_force
@@ -502,12 +515,12 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/floa
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_float/float_v1_rom_shim.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pico_malloc.c.i: cmake_force
@@ -520,17 +533,17 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_malloc/pic
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building ASM object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj"
 	/usr/bin/arm-none-eabi-gcc $(ASM_DEFINES) $(ASM_INCLUDES) $(ASM_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/crt0.S
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj"
 	/usr/bin/arm-none-eabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.obj -c /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/new_delete.cpp.i: cmake_force
@@ -543,7 +556,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_l
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_link/binary_info.c.i: cmake_force
@@ -556,7 +569,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_l
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdio.c.i: cmake_force
@@ -569,7 +582,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio/stdi
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c.i: cmake_force
@@ -582,7 +595,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdio_uart
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: CMakeFiles/SSD1306_test.dir/flags.make
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj: /home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building C object CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj"
 	/bin/arm-none-eabi-gcc-7.3.1 $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.obj   -c /home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c
 
 CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/spi.c.i: cmake_force
@@ -597,6 +610,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_spi/sp
 SSD1306_test_OBJECTS = \
 "CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj" \
 "CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj" \
+"CMakeFiles/SSD1306_test.dir/TMC7300.c.obj" \
 "CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj" \
 "CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj" \
 "CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj" \
@@ -649,6 +663,7 @@ SSD1306_test_EXTERNAL_OBJECTS =
 
 SSD1306_test.elf: CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj
 SSD1306_test.elf: CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
+SSD1306_test.elf: CMakeFiles/SSD1306_test.dir/TMC7300.c.obj
 SSD1306_test.elf: CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj
 SSD1306_test.elf: CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 SSD1306_test.elf: CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/hardware_claim/claim.c.obj
@@ -698,7 +713,7 @@ SSD1306_test.elf: CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_comm
 SSD1306_test.elf: CMakeFiles/SSD1306_test.dir/build.make
 SSD1306_test.elf: pico-sdk/src/rp2_common/boot_stage2/bs2_default_padded_checksummed.S
 SSD1306_test.elf: CMakeFiles/SSD1306_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Linking CXX executable SSD1306_test.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/pico/jim-code/SSD_1306/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Linking CXX executable SSD1306_test.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SSD1306_test.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/arm-none-eabi-objcopy -Oihex SSD1306_test.elf SSD1306_test.hex
 	/usr/bin/arm-none-eabi-objcopy -Obinary SSD1306_test.elf SSD1306_test.bin

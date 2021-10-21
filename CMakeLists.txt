@@ -20,6 +20,7 @@ pico_sdk_init()
 add_executable(${PROJECT_NAME}
         SSD1306_test.c
         OLED_128X64.c
+        TMC7300.c
         )
 
 # include directories

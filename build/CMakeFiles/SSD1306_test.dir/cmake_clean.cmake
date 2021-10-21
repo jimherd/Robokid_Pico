@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj"
   "CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj"
+  "CMakeFiles/SSD1306_test.dir/TMC7300.c.obj"
   "CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/critical_section.c.obj"
   "CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/lock_core.c.obj"
   "CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/common/pico_sync/mutex.c.obj"
