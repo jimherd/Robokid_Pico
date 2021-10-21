@@ -14,6 +14,8 @@
 #include "font.h"
 #include "bitmap.h"
 
+#include "TMC7300.h"
+
 int main() {
 
 char buffer2[20];

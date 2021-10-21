@@ -117,6 +117,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_l
 
 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj: ../OLED_128X64.c
 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj: ../OLED_128X64.h
+CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj: ../Pico_IO.h
 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj: /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h
 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico.h
 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj: /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/assert.h
@@ -155,7 +156,9 @@ CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj: generated/pico_base/pico/config_a
 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj: generated/pico_base/pico/version.h
 
 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: ../OLED_128X64.h
+CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: ../Pico_IO.h
 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: ../SSD1306_test.c
+CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: ../TMC7300.h
 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: ../bitmap.h
 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: ../font.h
 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj: /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h

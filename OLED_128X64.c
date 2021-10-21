@@ -34,6 +34,13 @@
     int32_t _cursor_x, _cursor_y;
 
 //==============================================================================
+// Display configuration information
+//==============================================================================
+
+//uint32_t display_height = 64;
+//uint32_t display_width  = 128;
+
+//==============================================================================
 // Declaration of global variables from OLED_128X64.h
 //==============================================================================
 unsigned char *_console_font_data;  
@@ -59,45 +66,44 @@ uint8_t cnt_character = 0;
 // Sequence of commands to initialise SSD1036 display
 //==============================================================================
 const uint8_t init_sequence [] = { 
-    SET_DISPLAY_OFF ,                 // Display OFF (sleep mode)
+    SET_DISPLAY_OFF ,               // Display OFF (sleep mode)
     SET_MEMORY_ADDRESSING_MODE , 
-        HORIZONTAL_ADDRESSING_MODE,   // Set Memory Addressing Mode
-        // 00=Horizontal Addressing Mode; 01=Vertical Addressing Mode;
-        // 10=Page Addressing Mode (RESET); 11=Invalid
-    SET_PAGE_START_ADDRESS_PAGE_MODE,            // Set Page Start Address for Page Addressing Mode, 0-7
+        HORIZONTAL_ADDRESSING_MODE, // Set Memory Addressing Mode
+          // 00=Horizontal Addressing Mode; 01=Vertical Addressing Mode;
+          // 10=Page Addressing Mode (RESET); 11=Invalid
+    SET_PAGE_START_ADDRESS_PAGE_MODE,   // Set Page Start Address for Page Addressing Mode, 0-7
     SET_COM_OUT_DIRECTION,              // Set COM Output Scan Direction
-    (SET_LOWER_COLUMN_START_ADDRESS_PAGE_MODE | 0x00),            // --set low column address
-    (SET_HIGHER_COLUMN_START_ADDRESS_PAGE_MODE | 0x00),            // --set high column address
-    (SET_DISPLAY_START_LINE | PAGE0),            // --set start line address
+    (SET_LOWER_COLUMN_START_ADDRESS_PAGE_MODE | 0x00),     // --set low column address
+    (SET_HIGHER_COLUMN_START_ADDRESS_PAGE_MODE | 0x00),    // --set high column address
+    (SET_DISPLAY_START_LINE | PAGE0),                      // --set start line address
     SET_CONTRAST, 
-        0x3F,      // Set contrast control register
-    SET_SEGMENT_REMAP_127_to_SEG0,            // Set Segment Re-map. A0=address mapped; A1=address 127 mapped.
-    SET_NORMAL_DISPLAY,            // Set display mode. A6=Normal; A7=Inverse
+        0x3F,                       // Set contrast control register
+    SET_SEGMENT_REMAP_127_to_SEG0,  // Set Segment Re-map. A0=address mapped; A1=address 127 mapped.
+    SET_NORMAL_DISPLAY,             // Set display mode. A6=Normal; A7=Inverse
     SET_MULTIPLEX_RATIO, 
-        DISPLAY_HEIGHT-1, // Set multiplex ratio(1 to 64)
-    SET_ALL_PIXELS_NORMAL ,            // Output RAM to Display
-					 // 0xA4=Output follows RAM content; 0xA5,Output ignores RAM content
+        DISPLAY_HEIGHT-1,           // Set multiplex ratio(1 to 64)
+    SET_ALL_PIXELS_NORMAL ,         // Output RAM to Display
+					         // 0xA4=Output follows RAM content; 0xA5,Output ignores RAM content
     SET_DISPLAY_OFFSET, 
-        0x00,      // Set display offset. 00 = no offset
+        0x00,                       // Set display offset. 00 = no offset
     SET_DISPLAY_CLK_DIV,            // --set display clock divide ratio/oscillator frequency
-        0xF0,            // --set divide ratio
+        0xF0,                       // --set divide ratio
     SET_PRE_CHARGE_PERIOD, 
-        0x22,      // Set pre-charge period 
-    SET_COM_PINS_CONFIG,  // Set com pins hardware configuration
+        0x22,                       // Set pre-charge period 
+    SET_COM_PINS_CONFIG,            // Set com pins hardware configuration
         0x12,      
-    SET_VCOM_DESELECT_LEVEL,            // --set vcomh
-        0x20,            // 0x20,0.77xVcc
+    SET_VCOM_DESELECT_LEVEL,        // --set vcomh
+        0x20,                       // 0x20,0.77xVcc
     SET_CHARGE_PUMP, 
-        ENABLE_CHARGE_PUMP,      // Set DC-DC enable
+        ENABLE_CHARGE_PUMP,         // Set DC-DC enable
 };
-
 
 //==============================================================================
 // Initializes the OLED module.
 //==============================================================================
 void  Oled_Init(void){
 
-    _cursor_x = 0;
+    _cursor_x = 0;5.;
     _cursor_y = 0;
 
     gpio_init(OLED_CS);

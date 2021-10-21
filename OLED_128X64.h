@@ -15,6 +15,8 @@
 #ifndef __OLED_128X64_H__
 #define __OLED_128X64_H__
 
+#include    "Pico_IO.h"
+
 #define SSD1306_LCDWIDTH 128
 #define SSD1306_LCDHEIGHT 64
 
@@ -32,17 +34,16 @@
 // OLED:RESET  <<<>>> This module hasn't got RESET pin. 
 //==============================================================================
 
-#define     OLED_MOSI    3      // GP3   Pin 5
-#define     OLED_MISO    4      // GP4   Pin 6
-#define     OLED_CS      5      // GP5   Pin 7
-#define     OLED_SCK     6      // GP6   Pin 9
-#define     OLED_DC      7      // GP7   Pin 10
+#define     OLED_MOSI    GP3      // GP3   Pin 5
+#define     OLED_MISO    GP4      // GP4   Pin 6
+#define     OLED_CS      GP5      // GP5   Pin 7
+#define     OLED_SCK     GP6      // GP6   Pin 9
+#define     OLED_DC      GP7      // GP7   Pin 10
 
-#define     SPI_PORT    spi0
-#define     READ_BIT    0x80
+#define     SPI_PORT        spi0
 
-#define DISPLAY_WIDTH        128
-#define DISPLAY_HEIGHT        64
+#define     DISPLAY_WIDTH   128
+#define     DISPLAY_HEIGHT   64
 
 //==============================================================================
 // These are pages and frames that you can use.

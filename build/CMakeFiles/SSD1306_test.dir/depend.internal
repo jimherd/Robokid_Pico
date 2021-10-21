@@ -118,6 +118,7 @@ CMakeFiles/SSD1306_test.dir/home/pi/pico/pico-sdk/src/rp2_common/pico_standard_l
 CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
  /home/pi/pico/jim-code/SSD_1306/OLED_128X64.c
  /home/pi/pico/jim-code/SSD_1306/OLED_128X64.h
+ /home/pi/pico/jim-code/SSD_1306/Pico_IO.h
  /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h
  /home/pi/pico/pico-sdk/src/common/pico_base/include/pico.h
  /home/pi/pico/pico-sdk/src/common/pico_base/include/pico/assert.h
@@ -156,7 +157,9 @@ CMakeFiles/SSD1306_test.dir/OLED_128X64.c.obj
  generated/pico_base/pico/version.h
 CMakeFiles/SSD1306_test.dir/SSD1306_test.c.obj
  /home/pi/pico/jim-code/SSD_1306/OLED_128X64.h
+ /home/pi/pico/jim-code/SSD_1306/Pico_IO.h
  /home/pi/pico/jim-code/SSD_1306/SSD1306_test.c
+ /home/pi/pico/jim-code/SSD_1306/TMC7300.h
  /home/pi/pico/jim-code/SSD_1306/bitmap.h
  /home/pi/pico/jim-code/SSD_1306/font.h
  /home/pi/pico/pico-sdk/src/boards/include/boards/pico.h
