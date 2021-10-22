@@ -24,7 +24,7 @@ uint32_t  i, j, k;
     Oled_Init();
 
     Oled_SetFont(Terminal12x16, 12, 16, 32,127);
-    Oled_ConstText("library for", 0, 0);
+    Oled_ConstText("Test code", 0, 0);
     Oled_ConstText("Robikid", 0, 2);
     Oled_ConstText("Oled 128x64", 0, 4);
     Oled_ConstText("SSD1306  ", 0, 6);
