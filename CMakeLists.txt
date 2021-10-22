@@ -5,7 +5,7 @@ include(pico_sdk_import.cmake)
 
 # Project name : accessed as "SSD1306_test" or ${PROJECT_NAME}
 project(
-        SSD1306_test 
+        Robokid_test 
         VERSION 1.0
         LANGUAGES C CXX ASM
         )
@@ -18,7 +18,7 @@ pico_sdk_init()
 
 # create executable
 add_executable(${PROJECT_NAME}
-        SSD1306_test.c
+        Robokid_test.c
         OLED_128X64.c
         TMC7300.c
         )
