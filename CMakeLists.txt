@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.12)
 # Pull in SDK (must be before project)
 include(pico_sdk_import.cmake)
 
-# Project name : accessed as "SSD1306_test" or ${PROJECT_NAME}
+# Project name : accessed as "Robokid_test" or ${PROJECT_NAME}
 project(
         Robokid_test 
         VERSION 1.0

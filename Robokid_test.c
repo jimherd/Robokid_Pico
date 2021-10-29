@@ -15,6 +15,8 @@
 #include "bitmap.h"
 
 #include "TMC7300.h"
+#include "TMC7300_Registers.h"
+#include "TMC7300_Fields.h"
 
 int main() {
 
@@ -30,6 +32,8 @@ uint32_t  i, j, k;
     Oled_ConstText("SSD1306  ", 0, 6);
 
     sleep_ms(3000);
+
+    TMC7300_Init();
 
     Oled_FillScreen(0x00);
     Oled_ConstText("lines", 30, 0);
