@@ -116,7 +116,7 @@
 //==============================================================================
 // Look-up table for CRC8 calculation.
 //==============================================================================
-/**
+/**uint32_t TMC7300(command_t command, RW_mode_t RW_mode, uint32_t value)
  * @brief Look-up table for CRC8 calculation.
  * 
  * @note    Tables of 8-bit vales for polynomial (8,4,2,1).
@@ -151,6 +151,13 @@ static const uint8_t TMC7300_crc_table[] = {
 };
 
 //==============================================================================
+// enum typedef definitions
+//==============================================================================
+
+typedef enum { READ_CMD, WRITE_CMD} RW_mode_t;
+typedef enum { SET_PWM_A, SET_PWM_B} command_t;
+
+//==============================================================================
 // datagram typedef definitions
 //==============================================================================
 
@@ -181,11 +188,13 @@ typedef struct TMC7300_read_reply_datagram {
 // Function prototypes.
 //==============================================================================
 
-void    TMC7300_Init(void);
-void    TMC7300_write_reg(TMC7300_write_datagram_t *datagram);
-uint8_t TMC7300_CRC8(uint8_t *data, uint32_t bytes);
-void    create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint8_t register_value);
-void    create_read_datagram(TMC7300_read_datagram_t *datagram, uint8_t register_address);
-void    set_master_slave_delay(uint32_t bit_times);
+void     TMC7300_Init(void);
+void     TMC7300_write_reg(TMC7300_write_datagram_t *datagram);
+uint8_t  TMC7300_CRC8(uint8_t *data, uint32_t bytes);
+void     create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint8_t register_value);
+void     create_read_datagram(TMC7300_read_datagram_t *datagram, uint8_t register_address);
+void     set_master_slave_delay(uint32_t bit_times);
+void     init_TMC7300_shadow_registers(void);
+uint32_t TMC7300(command_t command, RW_mode_t RW_mode, uint32_t value);
 
 #endif
