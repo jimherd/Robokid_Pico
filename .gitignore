@@ -1,6 +1,14 @@
 .vscode/
 build/
 Archive/
+pico-sdk/
+generated/
+elf2uf2/
+
 
 *.obj
+*.vcxproj
+*.filters
+*.sln
+
 

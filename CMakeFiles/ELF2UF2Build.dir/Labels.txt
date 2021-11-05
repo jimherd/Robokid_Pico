@@ -1,0 +1,13 @@
+# Target labels
+ ELF2UF2Build
+# Source files and their labels
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/ELF2UF2Build
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/700c41c9da134f9f3a2819bb89690a67/ELF2UF2Build.rule
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/dce1447458b1aa9491c07c12ce1cb662/ELF2UF2Build-complete.rule
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/1ac0980dd6ecede3348cba6ebf67ff09/ELF2UF2Build-build.rule
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/1ac0980dd6ecede3348cba6ebf67ff09/ELF2UF2Build-configure.rule
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/1ac0980dd6ecede3348cba6ebf67ff09/ELF2UF2Build-download.rule
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/1ac0980dd6ecede3348cba6ebf67ff09/ELF2UF2Build-install.rule
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/1ac0980dd6ecede3348cba6ebf67ff09/ELF2UF2Build-mkdir.rule
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/1ac0980dd6ecede3348cba6ebf67ff09/ELF2UF2Build-patch.rule
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/1ac0980dd6ecede3348cba6ebf67ff09/ELF2UF2Build-update.rule

@@ -15,7 +15,9 @@
 // Global variables and structures
 //==============================================================================
 
-TMC7300_write_datagram_t write_datagram;
+TMC7300_write_datagram_t        write_datagram;
+TMC7300_read_datagram_t         read_datagram;
+TMC7300_read_reply_datagram_t   read_reply_datagram;
 
 struct shadow_registers {
     uint32_t GCONF;
@@ -97,7 +99,7 @@ void create_read_datagram(TMC7300_read_datagram_t *datagram, uint8_t register_ad
     datagram->sync_byte =  TMC7300_SYNC_BYTE;
     datagram->slave_address = 0;
     datagram->register_address = register_address | TMC7300_READ_BIT;
-    datagram->crc = TMC7300_CRC8((uint8_t *)datagram, LENGTH_WRITE_DATAGRAM);
+    datagram->crc = TMC7300_CRC8((uint8_t *)datagram, LENGTH_WRITE_DATAGRAM-1);
 }
 
 //==============================================================================
@@ -128,7 +130,7 @@ uint8_t crc = 0;
 // TMC7300_write_reg
 //==============================================================================
 /**
- * @brief Write 8 byte datagram to TMC7300 h-bridge chip
+ * @brief Transmit 8 byte datagram to TMC7300 to write to a device register
  * 
  * @param   datagram    pointer to 8-byte array 
  * @return              no value returned
@@ -139,9 +141,33 @@ void TMC7300_write_reg(TMC7300_write_datagram_t *datagram) {
 }
 
 //==============================================================================
+// TMC7300_read_reg
+//==============================================================================
+/**
+ * @brief Transmit 4 byte datagram to TMC7300 to read a device register and
+ *        recieve a 12 byte reply
+ * 
+ * @param datagram  pointer to 4-byte array
+ * @return          error code
+ */
+int32_t  TMC7300_read_reg(TMC7300_read_datagram_t *datagram, TMC7300_read_reply_datagram_t *reply_datagram) {
+
+    uart_write_blocking(UART_PORT, (uint8_t *)datagram, sizeof(TMC7300_read_datagram_t));
+    uart_read_blocking(UART_PORT, (uint8_t *)&read_reply_datagram, sizeof(TMC7300_read_reply_datagram_t));
+    uint8_t crc = TMC7300_CRC8((uint8_t *)&read_reply_datagram, LENGTH_READ_REPLY_DATAGRAM-1);
+    if (crc != read_reply_datagram.crc) {
+        return CRC_ERROR;
+    }
+    return OK;
+}
+
+//==============================================================================
 // set_master_slave_delay
 //==============================================================================
 /**
+ * @brief 
+ * 
+ *
  * @brief set delay between recieving a read datagram and sending a reply
  * 
  * @param[in]   delay in units of UART bit times 
@@ -189,32 +215,76 @@ void init_TMC7300_shadow_registers(void) {
 // TMC7300_command
 //==============================================================================
 /**
+ *
  * @brief execute the set of TMC7300 commands
+ * 
+ * @param[in]   command     enum list of commands
+ * @param[in]   RW_mode     READ_CMD of WRITE_CMD
+ * @param[in]   value       32-bit value to be written for WRITE_CMD
+ * 
+ * @return                  error code ; OK if no errors detected
  * 
  */
 uint32_t TMC7300(command_t command, RW_mode_t RW_mode, uint32_t value) {
 
+uint32_t tmp_value, tmp_register, *shadow_register;
+
     switch(command) {
         case SET_PWM_A : {
+            tmp_register = TMC7300_PWM_AB;
+            shadow_register = &TMC7300_shadow_registers.PWM_AB;
             switch (RW_mode) {
                 case READ_CMD : {
-                    
                 }
                 case WRITE_CMD : {
-
-                }
-                default : {
-
+                    tmp_value = (value * 255) * 100;   // scale value to +/-100%
+                    CALC_REG_VALUE(TMC7300_shadow_registers.PWM_AB, tmp_value, TMC7300_PWM_A_MASK, TMC7300_PWM_A_SHIFT);
+                    break;
                 }
             }
             break;
         }
         case SET_PWM_B : {
+            tmp_register = TMC7300_PWM_AB;
+            shadow_register = &TMC7300_shadow_registers.PWM_AB;
+            switch (RW_mode) {
+                case READ_CMD : {
+                }
+                case WRITE_CMD : {
+                    tmp_value = (value * 255) * 100;    // scale value to +/-100%
+                    MERGE_REG_VALUE(TMC7300_shadow_registers.PWM_AB, tmp_value, TMC7300_PWM_A_MASK, TMC7300_PWM_A_SHIFT);
+                    break;
+                }
+            }
             break;
         }
-        default : {
-            break;
+        case  SET_SEND_DELAY : {
+            tmp_value = value;
+            tmp_register = TMC7300_SLAVECONF;
+            shadow_register = &TMC7300_shadow_registers.SLAVECONF;
+            switch (RW_mode) {
+                case WRITE_CMD : {
+                    MERGE_REG_VALUE(TMC7300_shadow_registers.SLAVECONF, tmp_value, TMC7300_SLAVECONF_MASK, TMC7300_SLAVECONF_SHIFT);
+                    break;
+                }
+            }
         }
-    }
-
+    //
+    // format datagram, send to TMC7300, and update shadow register
+    
+        switch (RW_mode) {
+                case READ_CMD : {
+                    create_read_datagram(&read_datagram, tmp_register);
+                    TMC7300_read_reg(&read_datagram, &read_reply_datagram);
+                    *shadow_register = read_reply_datagram.data;
+                    break;
+                }
+                case WRITE_CMD : {
+                    create_write_datagram(&write_datagram, tmp_value, tmp_register);
+                    TMC7300_write_reg(&write_datagram);
+                    *shadow_register = write_datagram.data;
+                    break;
+                }
+        }     // end execute switch
+    }   // end command switch
 }

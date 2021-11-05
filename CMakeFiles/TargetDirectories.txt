@@ -1,0 +1,8 @@
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/Robokid_test.dir
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/ELF2UF2Build.dir
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/ALL_BUILD.dir
+C:/jth/Pico/jim_code/Robokid_Pico/CMakeFiles/ZERO_CHECK.dir
+C:/jth/Pico/jim_code/Robokid_Pico/pico-sdk/CMakeFiles/ALL_BUILD.dir
+C:/jth/Pico/jim_code/Robokid_Pico/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default.dir
+C:/jth/Pico/jim_code/Robokid_Pico/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_bin.dir
+C:/jth/Pico/jim_code/Robokid_Pico/pico-sdk/src/rp2_common/boot_stage2/CMakeFiles/bs2_default_padded_checksummed_asm.dir

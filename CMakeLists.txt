@@ -1,13 +1,11 @@
 cmake_minimum_required(VERSION 3.12)
 
 # Pull in SDK (must be before project)
-include(pico_sdk_import.cmake)
+include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
 # Project name : accessed as "Robokid_test" or ${PROJECT_NAME}
 project(
-        Robokid_test 
-        VERSION 1.0
-        LANGUAGES C CXX ASM
+        Robokid_test C CXX ASM
         )
 
 set(CMAKE_C_STANDARD 11)

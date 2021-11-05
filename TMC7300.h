@@ -37,81 +37,20 @@
 #define     DEFAULT_DELAY_TO_SEND_US        8
 #define     BIT_TIMES_MAX                 120
 
-//  #define  register_GCONF             0x00
-//  #define  register_GSTAT             0x01
-//  #define  register_IFCNT             0x02
-//  #define  register_SLAVECONF         0x03
-//  #define  register_IOIN              0x06
-//  #define  register_CURRENT_LIMIT     0x10
-//  #define  register_PWM_AB            0x22
-//  #define  register_CHOPCONF          0x6C
-//  #define  register_DRV_STATUS        0x6F
-//  #define  register_PWMCONF           0x70
+//==============================================================================
+// Error codes
+//==============================================================================
+#define     OK           0
+#define     CRC_ERROR   -1
 
-// // Register GCONF
-// #define PWM_DIRECT        0x00000001
-// #define EXTCAP            0x00000002
-// #define PAR_MODE          0x00000004
-// #define TEST_MODE         0x00000080
-
-// // Register  GSTAT
-// #define RESET            0x00000001
-// #define DRV_ERR          0x00000002
-// #define U3V5             0x00000004
-
-// // Register  IFCNT
-// #define IFCNT            0x000000FF
-
-// // Register  SLAVECONF
-// #define SLAVECONF        0x00000F00
-
-// // Register  IOIN
-// #define EN                0x00000001
-// #define NSTDBY            0x00000002
-// #define AD0               0x00000004
-// #define AD1               0x00000008
-// #define DIAG              0x00000010
-// #define UART_ENABLED      0x00000020
-// #define UART_INPUT        0x00000040
-// #define MODE_INPUT        0x00000080
-// #define A2                0x00000100
-// #define A1                0x00000200
-// #define COMP_A1A2         0x00000400 
-// #define COMP_B1B2         0x00000800
-
-// // Register  CURRENT_LIMIT
-// #define MOTORRUN         0x00000001
-// #define IRUN             0x00001F00
-
-// // Register  PWM_AB
-// #define PWM_A            0x000001FF
-// #define PWM_B            0x01FF0000
-// #define PWM_AB           0x000001FF
-
-// // Register  CHOPCONF
-// #define ENABLEDRV        0x00000001
-// #define TBL              0x00018000
-// #define DISS2G           0x40000000
-// #define DISS2VS          0x80000000
-
-// // Register  DRV_STATUS
-// #define OTPW             0x00000001 
-// #define OT               0x00000002 
-// #define S2GA             0x00000004 
-// #define S2GB             0x00000008 
-// #define S2VSA            0x00000010
-// #define S2VSB            0x00000020
-// #define OLA              0x00000040
-// #define OLB              0x00000080 
-// #define T120             0x00000100
-// #define T150             0x00000200
-
-// // Register  PWMCONF
-// #define PWM_FREQ         0x00030000
-// #define FREEWHEEL        0x00300000
-
+//==============================================================================
+// Macros
+//==============================================================================
 #define       DISABLE_POWER_STAGE          gpio_put(TMC7300_EN_PIN, 0)
 #define       ENABLE_POWER_STAGE           gpio_put(TMC7300_EN_PIN, 1)
+
+#define MERGE_REG_VALUE(REGISTER, VALUE, MASK, SHIFT)  VALUE = ((REGISTER && (~MASK)) || (VALUE << SHIFT))
+#define EXTRACT_REG_VALUE(VALUE, MASK, SHIFT)          ((VALUE && MASK) >> SHIFT)
 
 //==============================================================================
 // Look-up table for CRC8 calculation.
@@ -155,7 +94,7 @@ static const uint8_t TMC7300_crc_table[] = {
 //==============================================================================
 
 typedef enum { READ_CMD, WRITE_CMD} RW_mode_t;
-typedef enum { SET_PWM_A, SET_PWM_B} command_t;
+typedef enum { SET_PWM_A, SET_PWM_B, SET_SEND_DELAY} command_t;
 
 //==============================================================================
 // datagram typedef definitions
@@ -190,6 +129,7 @@ typedef struct TMC7300_read_reply_datagram {
 
 void     TMC7300_Init(void);
 void     TMC7300_write_reg(TMC7300_write_datagram_t *datagram);
+int32_t  TMC7300_read_reg(TMC7300_read_datagram_t *datagram, TMC7300_read_reply_datagram_t *reply_datagram);
 uint8_t  TMC7300_CRC8(uint8_t *data, uint32_t bytes);
 void     create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint8_t register_value);
 void     create_read_datagram(TMC7300_read_datagram_t *datagram, uint8_t register_address);

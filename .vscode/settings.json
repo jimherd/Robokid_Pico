@@ -2,5 +2,9 @@
     "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
     "files.associations": {
         "tmc7300_registers.h": "c"
-    }
+    },
+    "cmake.buildEnvironment": {
+        "PICO_SDK_PATH ": "C:\\jth\\Pico\\pico-sdk"
+    },
+    "cmake.generator": "NMake Makefiles"
 }
