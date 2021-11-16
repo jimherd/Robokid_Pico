@@ -21,7 +21,7 @@
 #define SSD1306_LCDHEIGHT 64
 
 //==============================================================================
-// Connection of module OLED.
+// SPI Connection of module OLED.
 //
 // VCC         <<<>>> 3.3 V.
 // GND         <<<>>> GND.
@@ -41,6 +41,20 @@
 #define     OLED_DC      GP7      // GP7   Pin 10
 
 #define     SPI_PORT        spi0
+
+//==============================================================================
+// I2C Connection of module OLED.
+//
+// VCC         <<<>>> 3.3 V.
+// GND         <<<>>> GND.
+// OLED_SCL    <<<>>> Connect to I2C SCL line.
+// OLED_SDA    <<<>>> Connect to I2C SDA line.
+//==============================================================================
+
+#define     OLED_I2C_SCL    GP7      // GP3  Pin 5
+#define     OLED_I2C_SDA    GP4      // GP4  Pin 6
+
+#define     I2C_PORT        i2c0
 
 #define     DISPLAY_WIDTH   128
 #define     DISPLAY_HEIGHT   64
@@ -112,20 +126,6 @@
 #define ENABLE_CHARGE_PUMP      0x14
 
 
-
-//class OLED_128X64
-//{
-//public: gpio_put(OLED_CS, 1);
-    /** Construct a new SSD1306 object.
-     *  @param cs The connected C/S pin.
-     *  @param rs The connected RS pin.
-     *  @param dc The connected DC pin.
-     *  @param clk The connected CLK pin.
-     *  @param data The connected Data pin.
-     */
- //   OLED_128 */X64(PinName cs, PinName rs, PinName dc, PinName clk, PinName data);
-
-
 //==============================================================================
 // Function Prototypes.
 //==============================================================================
@@ -160,23 +160,5 @@
 
     void _send_command(uint8_t code);
     void _send_data(uint8_t value);
-
-/* private:
-    SPI _spi;
-    DigitalOut _cs, _reset, _dc;
-    uint8_t  Oled_RAM[1024]; 
-    int _cursor_x, _cursor_y;
-    */
-
-    /* unsigned char *_console_font_data;  
-    unsigned int _console_font_width;
-    unsigned int _double_height_text;
-    
-    const unsigned char *font, *font2;
-    uint8_t width, height, min, max;
-
-    uint8_t cnt_width;
-    uint8_t cnt _character;  */
-
 
 #endif

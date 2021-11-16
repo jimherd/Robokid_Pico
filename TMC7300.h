@@ -14,11 +14,11 @@
 //                                                                              
 // 
 //    
-#define     UART_PORT        uart0  
+#define     UART_PORT        uart1  
 #define     BAUD_RATE       115200    
 
-#define     UART_TX_PIN     GP16         // Pin 21
-#define     UART_RX_PIN     GP17         // Pin 22
+#define     UART_TX_PIN     GP8          // Pin 11
+#define     UART_RX_PIN     GP9          // Pin 12
 #define     TMC7300_EN_PIN  GP18         // Pin 24
 
 #define     TMC7300_SYNC_BYTE       0x50

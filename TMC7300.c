@@ -238,7 +238,7 @@ uint32_t tmp_value, tmp_register, *shadow_register;
                 }
                 case WRITE_CMD : {
                     tmp_value = (value * 255) * 100;   // scale value to +/-100%
-                    CALC_REG_VALUE(TMC7300_shadow_registers.PWM_AB, tmp_value, TMC7300_PWM_A_MASK, TMC7300_PWM_A_SHIFT);
+                    MERGE_REG_VALUE(TMC7300_shadow_registers.PWM_AB, tmp_value, TMC7300_PWM_A_MASK, TMC7300_PWM_A_SHIFT);
                     break;
                 }
             }

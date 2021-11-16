@@ -23,15 +23,18 @@ int main() {
 char buffer2[20];
 uint32_t  i, j, k;
 
+    stdio_init_all();
+
     Oled_Init();
 
     Oled_SetFont(Terminal12x16, 12, 16, 32,127);
     Oled_ConstText("Test code", 0, 0);
-    Oled_ConstText("Robikid", 0, 2);
+    Oled_ConstText("Robikid 2", 0, 2);
     Oled_ConstText("Oled 128x64", 0, 4);
     Oled_ConstText("SSD1306  ", 0, 6);
 
     sleep_ms(3000);
+    printf("Loaded\r\n");
 
     TMC7300_Init();
 
