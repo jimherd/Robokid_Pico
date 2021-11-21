@@ -32,6 +32,8 @@ struct shadow_registers {
     uint32_t PWMCONF;
 } TMC7300_shadow_registers;
 
+register_data_t TMC7300_reg_data[TMC7300_NOS_registers];
+
 //==============================================================================
 // Functions
 //==============================================================================
@@ -46,7 +48,6 @@ struct shadow_registers {
  */
 void  TMC7300_Init(void) {
     
-
     uart_init(UART_PORT, BAUD_RATE);
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
     gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
@@ -58,7 +59,9 @@ void  TMC7300_Init(void) {
 
     init_TMC7300_shadow_registers();
 
+for (int i=0 ; i < 1000 ; i++) {
     set_master_slave_delay(DEFAULT_DELAY_TO_SEND_US);
+}
 }
 
 //==============================================================================
@@ -184,9 +187,9 @@ uint32_t  tmp_bit_times, master_slave_delay;
     }
     tmp_bit_times = tmp_bit_times & 0xFFFFFFF8;
 
-    master_slave_delay = (((1000000 * tmp_bit_times) / BAUD_RATE) << 3);
+    master_slave_delay = (((1000000 * tmp_bit_times) / BAUD_RATE) << TMC7300_SLAVECONF_SHIFT);
 
-    create_write_datagram(&write_datagram, TMC7300_CHIP_0, TMC7300_SLAVECONF);
+    create_write_datagram(&write_datagram, TMC7300_SLAVECONF, (uint8_t)master_slave_delay);
     TMC7300_write_reg(&write_datagram);
 }
 

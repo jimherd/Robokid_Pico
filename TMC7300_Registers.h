@@ -24,4 +24,6 @@
 #define TMC7300_DRVSTATUS      0x6F
 #define TMC7300_PWMCONF        0x70
 
+#define TMC7300_NOS_registers   10
+
 #endif /* TMC7300_Register */

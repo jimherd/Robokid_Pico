@@ -19,7 +19,7 @@
 
 #define     UART_TX_PIN     GP8          // Pin 11
 #define     UART_RX_PIN     GP9          // Pin 12
-#define     TMC7300_EN_PIN  GP18         // Pin 24
+#define     TMC7300_EN_PIN  GP10         // Pin 14
 
 #define     TMC7300_SYNC_BYTE       0x50
 #define     TMC7300_WRITE_BIT       0x80
@@ -122,6 +122,13 @@ typedef struct TMC7300_read_reply_datagram {
     uint32_t    data;
     uint8_t     crc;
 } TMC7300_read_reply_datagram_t;
+
+typedef struct register_data {
+    uint8_t     register_address;
+    uint32_t    init_value;
+    uint32_t    shadow_vale;
+} register_data_t;
+
 
 //==============================================================================
 // Function prototypes.

@@ -7,20 +7,28 @@
 // Register GCONF
 #define TMC7300_PWM_DIRECT_MASK    0x00000001
 #define TMC7300_PWM_DIRECT_SHIFT   0
+    #define TMC7300_NORMAL_MODE         0x01
 #define TMC7300_EXTCAP_MASK        0x00000002
 #define TMC7300_EXTCAP_SHIFT       1
+    #define TMC7300_INTERNAL_CAP        0x00    //default
+    #define TMC7300_EXTERNAL_CAP        0x01
 #define TMC7300_PAR_MODE_MASK      0x00000004
 #define TMC7300_PAR_MODE_SHIFT     2
+    #define TMC7300_DUAL_MOTOR_MODE     0x00
+    #define TMC7300_SINGLE_MOTOR_MODE   0x01    // default
 #define TMC7300_TEST_MODE_MASK     0x00000080
 #define TMC7300_TEST_MODE_SHIFT    7
 
 // Register GSTAT
 #define TMC7300_RESET_MASK         0x00000001
 #define TMC7300_RESET_SHIFT        0
+    #define TMC7300_RESET_STAT_FLAG     0x01
 #define TMC7300_DRV_ERR_MASK       0x00000002
 #define TMC7300_DRV_ERR_SHIFT      1
+    #define TMC7300_DRV_ERR_STAT_FLAG   0x02
 #define TMC7300_U3V5_MASK          0x00000004
 #define TMC7300_U3V5_SHIFT         2
+    #define TMC7300_u3v5_STAT_FLAG      0x04
 
 // Register IFCNT
 #define TMC7300_IFCNT_MASK         0x000000FF
@@ -61,14 +69,20 @@
 // Register CURRENT_LIMIT
 #define TMC7300_MOTORRUN_MASK      0x00000001
 #define TMC7300_MOTORRUN_SHIFT     0
+    #define TMC7300_NORMAL_MODE_OP      0x00
+    #define TMC7300_FREEWHEEL_MODE_OP   0x01    // default
 #define TMC7300_IRUN_MASK          0x00001F00
 #define TMC7300_IRUN_SHIFT         8
+    #define TMC7300_IRUN_MAX            0x1F    //default
 
 // Register PWM_AB
 #define TMC7300_PWM_A_MASK         0x000001FF
 #define TMC7300_PWM_A_SHIFT        0
 #define TMC7300_PWM_B_MASK         0x01FF0000
 #define TMC7300_PWM_B_SHIFT        16
+    #define TMC7300_PWM_MAX_PLUS        0x377   // +100%
+    #define TMC7300_PWM_ZERO            0x000   //    0%
+    #define TMC7300_PWM_MAX_MINUS       0x101   // -100%
 
 //Register CHOPCONF
 #define TMC7300_ENABLEDRV_MASK     0x00000001
@@ -83,8 +97,16 @@
 // Register PWMCONF
 #define TMC7300_PWM_FREQ_MASK      0x00030000
 #define TMC7300_PWM_FREQ_SHIFT     16
+    #define TMC7300_PWM_FREQ_23_4kHz    0x00
+    #define TMC7300_PWM_FREQ_35_1kHz    0x01
+    #define TMC7300_PWM_FREQ_46_9kHz    0x02
+    #define TMC7300_PWM_FREQ_58_5kHz    0x03
 #define TMC7300_FREEWHEEL_MASK     0x00300000
 #define TMC7300_FREEWHEEL_SHIFT    20
+    #define TMC7300_STOP_NORMAL         0x00
+    #define TMC7300_STOP_FREEWHEEL      0x01
+    #define TMC7300_STOP_BRAKE_LS       0x02
+    #define TMC7300_STOP_BRAKE_HS       0x03
 
 //Register DRV_STATUS
 #define TMC7300_OTPW_MASK          0x00000001

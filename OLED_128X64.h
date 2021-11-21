@@ -15,7 +15,9 @@
 #ifndef __OLED_128X64_H__
 #define __OLED_128X64_H__
 
-#include    "Pico_IO.h"
+#include "Pico_IO.h"
+
+
 
 #define SSD1306_LCDWIDTH 128
 #define SSD1306_LCDHEIGHT 64
@@ -160,5 +162,7 @@
 
     void _send_command(uint8_t code);
     void _send_data(uint8_t value);
+
+    void  Oled_Demo(void);
 
 #endif
