@@ -32,7 +32,7 @@ typedef enum  { GCONF_IDX,
                 SLAVECONF_IDX,
                 IOIN_IDX,
                 CURRENT_LIMIT_IDX,
-                PWM_IDX,
+                PWM_AB_IDX,
                 CHOPCONF_IDX,
                 DRV_STATUS_IDX,
                 PWMCONF_IDX

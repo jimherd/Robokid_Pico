@@ -21,7 +21,7 @@
 #define TMC7300_PWM_AB         0x22
 
 #define TMC7300_CHOPCONF       0x6C
-#define TMC7300_DRVSTATUS      0x6F
+#define TMC7300_DRV_STATUS     0x6F
 #define TMC7300_PWMCONF        0x70
 
 #define TMC7300_NOS_registers   10

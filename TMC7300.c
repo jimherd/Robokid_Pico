@@ -22,20 +22,22 @@ TMC7300_read_datagram_t         read_datagram;
 TMC7300_read_reply_datagram_t   read_reply_datagram;
 TMC7300_errors_t                TMC7300_sys_error;      // global error flag
 
-struct shadow_registers {
-    uint32_t GCONF;
-    uint32_t GSTAT;
-    uint32_t IFCNT;
-    uint32_t SLAVECONF;
-    uint32_t IOIN;
-    uint32_t CURRENT_LIMIT;
-    uint32_t PWM_AB;
-    uint32_t CHOPCONF;
-    uint32_t DRVSTATUS;
-    uint32_t PWMCONF;
-} TMC7300_shadow_registers;
+//
+// Structure to hold data relevant to the 10 registers in the TMC7300 device
 
-register_data_t TMC7300_reg_data[TMC7300_NOS_registers];
+register_data_t TMC7300_reg_data[TMC7300_NOS_registers] = {
+//    register            access mode      init value    shadow value
+    {TMC7300_GCONF,         READ_WRITE,    0x00000000,    0x00000000 },
+    {TMC7300_GSTAT,         READ_WRITE,    0x00000000,    0x00000000 },
+    {TMC7300_IFCNT,         READ_ONLY,     0x00000000,    0x00000000 },
+    {TMC7300_SLAVECONF,     WRITE_ONLY,    0x00000000,    0x00000000 },
+    {TMC7300_IOIN,          READ_ONLY,     0x00000000,    0x00000000 },
+    {TMC7300_CURRENT_LIMIT, WRITE_ONLY,    0x00001F01,    0x00001F01 },
+    {TMC7300_PWM_AB,        WRITE_ONLY,    0x00000000,    0x00000000 },
+    {TMC7300_CHOPCONF,      READ_WRITE,    0x13008001,    0x13008001 },
+    {TMC7300_DRV_STATUS,    READ_ONLY,     0x00000000,    0x00000000 },
+    {TMC7300_PWMCONF,       READ_WRITE,    0xC40D1024,    0xC40D1024 },
+};
 
 //==============================================================================
 // Functions
@@ -60,12 +62,35 @@ void  TMC7300_Init(void) {
     gpio_pull_down(TMC7300_EN_PIN);         // should default but just make sure
     DISABLE_POWER_STAGE;                    // essential before chip configuration
 
-    init_TMC7300_shadow_registers();
+    reset_TMC7300();
 
     for (int i=0 ; i < 1000 ; i++) {
         set_master_slave_delay(DEFAULT_DELAY_TO_SEND_US);
     }
 }
+
+//==============================================================================
+// Initialise TMC7300 registers and shadow registers
+//==============================================================================
+/**
+ * @brief Initialise TMC7300 registers and shadow registers
+ * 
+ */
+
+void reset_TMC7300(void) {
+
+    for (uint32_t i = 0; i < TMC7300_NOS_registers ; i++) {
+        if ((TMC7300_reg_data[i].RW_mode == READ_WRITE) || 
+                        (TMC7300_reg_data[i].RW_mode == WRITE_ONLY)) {
+            create_write_datagram(&write_datagram, TMC7300_reg_data[i].register_address, TMC7300_reg_data[i].init_value);
+            TMC7300_write_reg(&write_datagram);
+        } else {
+            create_read_datagram(&read_datagram, TMC7300_reg_data[i].register_address);
+            TMC7300_reg_data[i].shadow_value = TMC7300_read_reg(&read_datagram, &read_reply_datagram);
+        }
+    }
+}
+
 
 //==============================================================================
 // create_write_datagram
@@ -79,13 +104,13 @@ void  TMC7300_Init(void) {
  * 
  * @return      void
  */
-void create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint8_t register_value) {
+void create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint32_t register_value) {
 
-    datagram->sync_byte =  TMC7300_SYNC_BYTE;
-    datagram->slave_address = 0;
+    datagram->sync_byte        =  TMC7300_SYNC_BYTE;
+    datagram->slave_address    = 0;
     datagram->register_address = register_address | TMC7300_WRITE_BIT;
-    datagram->data = register_value;
-    datagram->crc = TMC7300_CRC8((uint8_t *)datagram, LENGTH_WRITE_DATAGRAM);
+    datagram->data             = register_value;
+    datagram->crc              = TMC7300_CRC8((uint8_t *)datagram, LENGTH_WRITE_DATAGRAM);
 
 }
 
@@ -102,10 +127,10 @@ void create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_
  */
 void create_read_datagram(TMC7300_read_datagram_t *datagram, uint8_t register_address){
 
-    datagram->sync_byte =  TMC7300_SYNC_BYTE;
-    datagram->slave_address = 0;
+    datagram->sync_byte        =  TMC7300_SYNC_BYTE;
+    datagram->slave_address    = 0;
     datagram->register_address = register_address | TMC7300_READ_BIT;
-    datagram->crc = TMC7300_CRC8((uint8_t *)datagram, LENGTH_WRITE_DATAGRAM-1);
+    datagram->crc              = TMC7300_CRC8((uint8_t *)datagram, LENGTH_WRITE_DATAGRAM-1);
 }
 
 //==============================================================================
@@ -197,27 +222,6 @@ uint32_t  tmp_bit_times, master_slave_delay;
 }
 
 //==============================================================================
-// init_TMC7300_shadow_registers
-//==============================================================================
-/**
- * @brief Set TMC7300 shadow registers to datasheet/reset defaults
- * 
- */
-void init_TMC7300_shadow_registers(void) {
-
-    TMC7300_shadow_registers.GCONF         = 0x03;
-    TMC7300_shadow_registers.GSTAT         = 0x00;
-    TMC7300_shadow_registers.IFCNT         = 0x00;
-    TMC7300_shadow_registers.SLAVECONF     = 0x00;
-    TMC7300_shadow_registers.IOIN          = 0x00;
-    TMC7300_shadow_registers.CURRENT_LIMIT = 0x00001F01;
-    TMC7300_shadow_registers.PWM_AB        = 0x00;
-    TMC7300_shadow_registers.CHOPCONF      = 0x13008001;
-    TMC7300_shadow_registers.DRVSTATUS     = 0x00;
-    TMC7300_shadow_registers.PWMCONF       = 0xC40D1024;
-}
-
-//==============================================================================
 // TMC7300_command
 //==============================================================================
 /**
@@ -226,39 +230,39 @@ void init_TMC7300_shadow_registers(void) {
  * 
  * @param[in]   command     enum list of commands
  * @param[in]   RW_mode     READ_CMD of WRITE_CMD
- * @param[in]   value       32-bit value to be written for WRITE_CMD
+ * @param[in]   value       32-bit value to be written by WRITE_CMD
  * 
  * @return                  error code ; OK if no errors detected
  * 
  */
-uint32_t TMC7300(command_t command, RW_mode_t RW_mode, uint32_t value) {
+TMC7300_errors_t execute_cmd(command_t command, RW_mode_t RW_mode, uint32_t value) {
 
-uint32_t tmp_value, tmp_register, *shadow_register;
+uint32_t tmp_value, target_register, *shadow_register;
 
     switch(command) {
         case SET_PWM_A : {
-            tmp_register = TMC7300_PWM_AB;
-            shadow_register = &TMC7300_shadow_registers.PWM_AB;
+            target_register = TMC7300_reg_data[PWM_AB_IDX].register_address;
+            shadow_register = &TMC7300_reg_data[PWM_AB_IDX].shadow_value; 
             switch (RW_mode) {
                 case READ_CMD : {
                 }
                 case WRITE_CMD : {
                     tmp_value = (value * 255) * 100;   // scale value to +/-100%
-                    MERGE_REG_VALUE(TMC7300_shadow_registers.PWM_AB, tmp_value, TMC7300_PWM_A_MASK, TMC7300_PWM_A_SHIFT);
+                    MERGE_REG_VALUE(*shadow_register, tmp_value, TMC7300_PWM_A_MASK, TMC7300_PWM_A_SHIFT);
                     break;
                 }
             }
             break;
         }
         case SET_PWM_B : {
-            tmp_register = TMC7300_PWM_AB;
-            shadow_register = &TMC7300_shadow_registers.PWM_AB;
+            target_register = TMC7300_reg_data[PWM_AB_IDX].register_address;
+            shadow_register = &TMC7300_reg_data[PWM_AB_IDX].shadow_value;
             switch (RW_mode) {
                 case READ_CMD : {
                 }
                 case WRITE_CMD : {
                     tmp_value = (value * 255) * 100;    // scale value to +/-100%
-                    MERGE_REG_VALUE(TMC7300_shadow_registers.PWM_AB, tmp_value, TMC7300_PWM_A_MASK, TMC7300_PWM_A_SHIFT);
+                    MERGE_REG_VALUE(*shadow_register, tmp_value, TMC7300_PWM_B_MASK, TMC7300_PWM_B_SHIFT);
                     break;
                 }
             }
@@ -266,11 +270,11 @@ uint32_t tmp_value, tmp_register, *shadow_register;
         }
         case  SET_SEND_DELAY : {
             tmp_value = value;
-            tmp_register = TMC7300_SLAVECONF;
-            shadow_register = &TMC7300_shadow_registers.SLAVECONF;
+            target_register = TMC7300_reg_data[SLAVECONF_IDX].register_address;
+            shadow_register = &TMC7300_reg_data[SLAVECONF_IDX].shadow_value;
             switch (RW_mode) {
                 case WRITE_CMD : {
-                    MERGE_REG_VALUE(TMC7300_shadow_registers.SLAVECONF, tmp_value, TMC7300_SLAVECONF_MASK, TMC7300_SLAVECONF_SHIFT);
+                    MERGE_REG_VALUE(*shadow_register, tmp_value, TMC7300_SLAVECONF_MASK, TMC7300_SLAVECONF_SHIFT);
                     break;
                 }
             }
@@ -280,59 +284,19 @@ uint32_t tmp_value, tmp_register, *shadow_register;
     
         switch (RW_mode) {
                 case READ_CMD : {
-                    create_read_datagram(&read_datagram, tmp_register);
+                    create_read_datagram(&read_datagram, target_register);
                     TMC7300_read_reg(&read_datagram, &read_reply_datagram);
                     *shadow_register = read_reply_datagram.data;
                     break;
                 }
                 case WRITE_CMD : {
-                    create_write_datagram(&write_datagram, tmp_value, tmp_register);
+                    create_write_datagram(&write_datagram, tmp_value, target_register);
                     TMC7300_write_reg(&write_datagram);
                     *shadow_register = write_datagram.data;
                     break;
                 }
         }     // end execute switch
     }   // end command switch
-}
-
-/**
- * @brief execute 
- * 
- * @param ReadWrite 
- * @param motor 
- * @param command 
- * @param value 
- * @return uint32_t 
- */
-uint32_t execute_cmd(RW_mode_t ReadWrite , uint8_t motor, command_t command, int32_t value ) {
-
-    TMC7300_sys_error = NO_ERROR;
-
-    if (motor > NOS_ROBOKID_MOTORS) {
-        TMC7300_sys_error= BAD_MOTOR_NUMBER;
-    }
-    switch (command) {
-        case SET_PWM_A : {
-            if (ReadWrite == READ_CMD) {
-
-            }
-            if (ReadWrite == WRITE_CMD) {
-                if (abs_int32(value) <= 100) {
-                    uint32_t tmp = 0;
-                } else {
-                    TMC7300_sys_error= BAD_PWM_PERCENT;
-                    return 0;
-                }
-                int32_t tmp = ((value *255) / 100);    // convert to +/-255 range
-                
-            }
-        }
-        case SET_PWM_B : {
-
-        }
-    }
-
-    return NO_ERROR;
 }
 
 /**

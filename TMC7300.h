@@ -11,6 +11,8 @@
 #include    "Pico_IO.h"
 #include    "pico/binary_info.h"
 
+#include    "TMC7300_FIELDS.h"
+
 #define     TMC7300_SYNC_BYTE       0x50
 #define     TMC7300_WRITE_BIT       0x80
 #define     TMC7300_READ_BIT        0x00
@@ -77,8 +79,20 @@ static const uint8_t TMC7300_crc_table[] = {
     0xfa, 0xfd, 0xf4, 0xf3
 };
 
+//
+// initial values of TMC7300 registers
+
 static const uint32_t TMC7300_init_data[] = {
-    0x00,0x00
+    0x00000000,     // GCONF
+    0x00000000,     // GSTAT
+    0x00000000,     // IFCNT
+    0x00000000,     // SLAVECONF
+    0x00000000,     // IOIN
+    ((TMC7300_IRUN_MAX << TMC7300_IRUN_SHIFT) | TMC7300_FREEWHEEL_MODE_OP),  // CURRENT_LIMIT
+    0x00000000,     // PWM_AB
+    0x13008001,     // CHOPCONF
+    0x00000000,     // DRV_STATUS
+    0xC40D1024      // PWMCONF
 };
 
 //==============================================================================
@@ -130,15 +144,14 @@ typedef struct register_data {
 //==============================================================================
 
 void     TMC7300_Init(void);
+void     reset_TMC7300(void);
 void     TMC7300_write_reg(TMC7300_write_datagram_t *datagram);
 int32_t  TMC7300_read_reg(TMC7300_read_datagram_t *datagram, TMC7300_read_reply_datagram_t *reply_datagram);
 uint8_t  TMC7300_CRC8(uint8_t *data, uint32_t bytes);
-void     create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint8_t register_value);
+void     create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint32_t register_value);
 void     create_read_datagram(TMC7300_read_datagram_t *datagram, uint8_t register_address);
 void     set_master_slave_delay(uint32_t bit_times);
-void     init_TMC7300_shadow_registers(void);
-uint32_t TMC7300(command_t command, RW_mode_t RW_mode, uint32_t value);
-uint32_t execute_cmd(RW_mode_t ReadWrite , uint8_t motor, command_t command, int32_t value );
+TMC7300_errors_t execute_cmd(command_t command, RW_mode_t RW_mode, uint32_t value);
 int32_t  abs_int32(int32_t value);
 
 #endif
