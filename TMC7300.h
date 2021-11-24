@@ -7,19 +7,9 @@
 #ifndef __TMC7300_H__
 #define __TMC3700_H__
 
-//#include "pico/stdlib.h"
+
 #include    "Pico_IO.h"
 #include    "pico/binary_info.h"
-
-//                                                                              
-// 
-//    
-#define     UART_PORT        uart1  
-#define     BAUD_RATE       115200    
-
-#define     UART_TX_PIN     GP8          // Pin 11
-#define     UART_RX_PIN     GP9          // Pin 12
-#define     TMC7300_EN_PIN  GP10         // Pin 14
 
 #define     TMC7300_SYNC_BYTE       0x50
 #define     TMC7300_WRITE_BIT       0x80
@@ -46,8 +36,6 @@
 //==============================================================================
 // Macros
 //==============================================================================
-#define       DISABLE_POWER_STAGE          gpio_put(TMC7300_EN_PIN, 0)
-#define       ENABLE_POWER_STAGE           gpio_put(TMC7300_EN_PIN, 1)
 
 #define MERGE_REG_VALUE(REGISTER, VALUE, MASK, SHIFT)  VALUE = ((REGISTER && (~MASK)) || (VALUE << SHIFT))
 #define EXTRACT_REG_VALUE(VALUE, MASK, SHIFT)          ((VALUE && MASK) >> SHIFT)
@@ -89,12 +77,18 @@ static const uint8_t TMC7300_crc_table[] = {
     0xfa, 0xfd, 0xf4, 0xf3
 };
 
+static const uint32_t TMC7300_init_data[] = {
+    0x00,0x00
+};
+
 //==============================================================================
 // enum typedef definitions
 //==============================================================================
 
-typedef enum { READ_CMD, WRITE_CMD} RW_mode_t;
-typedef enum { SET_PWM_A, SET_PWM_B, SET_SEND_DELAY} command_t;
+typedef enum { READ_CMD, WRITE_CMD } RW_mode_t;
+typedef enum { READ_ONLY, READ_WRITE, WRITE_ONLY } reg_access_t;
+typedef enum { SET_PWM_A, SET_PWM_B, SET_SEND_DELAY } command_t;
+typedef enum { NO_ERROR=0, BAD_MOTOR_NUMBER, BAD_PWM_PERCENT } TMC7300_errors_t;
 
 //==============================================================================
 // datagram typedef definitions
@@ -124,9 +118,10 @@ typedef struct TMC7300_read_reply_datagram {
 } TMC7300_read_reply_datagram_t;
 
 typedef struct register_data {
-    uint8_t     register_address;
-    uint32_t    init_value;
-    uint32_t    shadow_vale;
+    uint8_t       register_address;
+    reg_access_t  RW_mode;
+    uint32_t      init_value;
+    uint32_t      shadow_value;
 } register_data_t;
 
 
@@ -143,5 +138,7 @@ void     create_read_datagram(TMC7300_read_datagram_t *datagram, uint8_t registe
 void     set_master_slave_delay(uint32_t bit_times);
 void     init_TMC7300_shadow_registers(void);
 uint32_t TMC7300(command_t command, RW_mode_t RW_mode, uint32_t value);
+uint32_t execute_cmd(RW_mode_t ReadWrite , uint8_t motor, command_t command, int32_t value );
+int32_t  abs_int32(int32_t value);
 
 #endif

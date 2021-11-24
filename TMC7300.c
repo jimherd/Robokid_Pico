@@ -11,6 +11,8 @@
 #include "pico/stdlib.h"
 #include "hardware/uart.h"
 
+#include "robokid_2.h"
+
 //==============================================================================
 // Global variables and structures
 //==============================================================================
@@ -18,6 +20,7 @@
 TMC7300_write_datagram_t        write_datagram;
 TMC7300_read_datagram_t         read_datagram;
 TMC7300_read_reply_datagram_t   read_reply_datagram;
+TMC7300_errors_t                TMC7300_sys_error;      // global error flag
 
 struct shadow_registers {
     uint32_t GCONF;
@@ -48,7 +51,7 @@ register_data_t TMC7300_reg_data[TMC7300_NOS_registers];
  */
 void  TMC7300_Init(void) {
     
-    uart_init(UART_PORT, BAUD_RATE);
+    uart_init(TMC7300_UART_PORT, BAUD_RATE);
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
     gpio_set_function(UART_RX_PIN, GPIO_FUNC_UART);
 
@@ -59,9 +62,9 @@ void  TMC7300_Init(void) {
 
     init_TMC7300_shadow_registers();
 
-for (int i=0 ; i < 1000 ; i++) {
-    set_master_slave_delay(DEFAULT_DELAY_TO_SEND_US);
-}
+    for (int i=0 ; i < 1000 ; i++) {
+        set_master_slave_delay(DEFAULT_DELAY_TO_SEND_US);
+    }
 }
 
 //==============================================================================
@@ -140,7 +143,7 @@ uint8_t crc = 0;
  */
 void TMC7300_write_reg(TMC7300_write_datagram_t *datagram) {
 
-    uart_write_blocking(UART_PORT, (uint8_t *)datagram, sizeof(TMC7300_write_datagram_t));
+    uart_write_blocking(TMC7300_UART_PORT, (uint8_t *)datagram, sizeof(TMC7300_write_datagram_t));
 }
 
 //==============================================================================
@@ -155,8 +158,8 @@ void TMC7300_write_reg(TMC7300_write_datagram_t *datagram) {
  */
 int32_t  TMC7300_read_reg(TMC7300_read_datagram_t *datagram, TMC7300_read_reply_datagram_t *reply_datagram) {
 
-    uart_write_blocking(UART_PORT, (uint8_t *)datagram, sizeof(TMC7300_read_datagram_t));
-    uart_read_blocking(UART_PORT, (uint8_t *)&read_reply_datagram, sizeof(TMC7300_read_reply_datagram_t));
+    uart_write_blocking(TMC7300_UART_PORT, (uint8_t *)datagram, sizeof(TMC7300_read_datagram_t));
+    uart_read_blocking(TMC7300_UART_PORT, (uint8_t *)&read_reply_datagram, sizeof(TMC7300_read_reply_datagram_t));
     uint8_t crc = TMC7300_CRC8((uint8_t *)&read_reply_datagram, LENGTH_READ_REPLY_DATAGRAM-1);
     if (crc != read_reply_datagram.crc) {
         return CRC_ERROR;
@@ -290,4 +293,54 @@ uint32_t tmp_value, tmp_register, *shadow_register;
                 }
         }     // end execute switch
     }   // end command switch
+}
+
+/**
+ * @brief execute 
+ * 
+ * @param ReadWrite 
+ * @param motor 
+ * @param command 
+ * @param value 
+ * @return uint32_t 
+ */
+uint32_t execute_cmd(RW_mode_t ReadWrite , uint8_t motor, command_t command, int32_t value ) {
+
+    TMC7300_sys_error = NO_ERROR;
+
+    if (motor > NOS_ROBOKID_MOTORS) {
+        TMC7300_sys_error= BAD_MOTOR_NUMBER;
+    }
+    switch (command) {
+        case SET_PWM_A : {
+            if (ReadWrite == READ_CMD) {
+
+            }
+            if (ReadWrite == WRITE_CMD) {
+                if (abs_int32(value) <= 100) {
+                    uint32_t tmp = 0;
+                } else {
+                    TMC7300_sys_error= BAD_PWM_PERCENT;
+                    return 0;
+                }
+                int32_t tmp = ((value *255) / 100);    // convert to +/-255 range
+                
+            }
+        }
+        case SET_PWM_B : {
+
+        }
+    }
+
+    return NO_ERROR;
+}
+
+/**
+ * @brief compute absolute valus of a 32 bit integer
+ * 
+ * @param value 
+ * @return int32_t 
+ */
+int32_t abs_int32(int32_t value) {
+    return ((value < 0) ? -value : value);
 }

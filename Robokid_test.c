@@ -23,6 +23,8 @@
 #include "TMC7300_Registers.h"
 #include "TMC7300_Fields.h"
 
+#include "robokid_2.h"
+
 int main() {
 
     stdio_init_all();
