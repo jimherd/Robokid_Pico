@@ -5,6 +5,8 @@
  * @version 0.1
  * @date    2021-10-31
  */
+#include <stdlib.h>
+
 #include "TMC7300.h"
 #include "TMC7300_Registers.h"
 #include "TMC7300_Fields.h"
@@ -51,7 +53,10 @@ register_data_t TMC7300_reg_data[TMC7300_NOS_registers] = {
  * @return      void
  * 
  */
+
 void  TMC7300_Init(void) {
+
+    TMC7300_sys_error = NO_ERROR;       // clear global error variable
     
     uart_init(TMC7300_UART_PORT, BAUD_RATE);
     gpio_set_function(UART_TX_PIN, GPIO_FUNC_UART);
@@ -104,6 +109,7 @@ void reset_TMC7300(void) {
  * 
  * @return      void
  */
+
 void create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint32_t register_value) {
 
     datagram->sync_byte        =  TMC7300_SYNC_BYTE;
@@ -181,7 +187,7 @@ void TMC7300_write_reg(TMC7300_write_datagram_t *datagram) {
  * @param datagram  pointer to 4-byte array
  * @return          error code
  */
-int32_t  TMC7300_read_reg(TMC7300_read_datagram_t *datagram, TMC7300_read_reply_datagram_t *reply_datagram) {
+TMC7300_errors_t  TMC7300_read_reg(TMC7300_read_datagram_t *datagram, TMC7300_read_reply_datagram_t *reply_datagram) {
 
     uart_write_blocking(TMC7300_UART_PORT, (uint8_t *)datagram, sizeof(TMC7300_read_datagram_t));
     uart_read_blocking(TMC7300_UART_PORT, (uint8_t *)&read_reply_datagram, sizeof(TMC7300_read_reply_datagram_t));
@@ -189,36 +195,7 @@ int32_t  TMC7300_read_reg(TMC7300_read_datagram_t *datagram, TMC7300_read_reply_
     if (crc != read_reply_datagram.crc) {
         return CRC_ERROR;
     }
-    return OK;
-}
-
-//==============================================================================
-// set_master_slave_delay
-//==============================================================================
-/**
- * @brief 
- * 
- *
- * @brief set delay between recieving a read datagram and sending a reply
- * 
- * @param[in]   delay in units of UART bit times 
- * @return      no value returned
- * 
- */
-void set_master_slave_delay(uint32_t bit_times) {
-
-uint32_t  tmp_bit_times, master_slave_delay;
-
-    tmp_bit_times = bit_times;
-    if (bit_times > BIT_TIMES_MAX) {
-        tmp_bit_times = BIT_TIMES_MAX;
-    }
-    tmp_bit_times = tmp_bit_times & 0xFFFFFFF8;
-
-    master_slave_delay = (((1000000 * tmp_bit_times) / BAUD_RATE) << TMC7300_SLAVECONF_SHIFT);
-
-    create_write_datagram(&write_datagram, TMC7300_SLAVECONF, (uint8_t)master_slave_delay);
-    TMC7300_write_reg(&write_datagram);
+    return NO_ERROR;
 }
 
 //==============================================================================
@@ -227,6 +204,8 @@ uint32_t  tmp_bit_times, master_slave_delay;
 /**
  *
  * @brief execute the set of TMC7300 commands
+ * 
+ * @note    A read command will load the value into the shadow register for later access
  * 
  * @param[in]   command     enum list of commands
  * @param[in]   RW_mode     READ_CMD of WRITE_CMD
@@ -241,6 +220,9 @@ uint32_t tmp_value, target_register, *shadow_register;
 
     switch(command) {
         case SET_PWM_A : {
+            if (abs(value > 100)) {     // check PWM % value is legal
+                return BAD_PWM_PERCENT;
+            }
             target_register = TMC7300_reg_data[PWM_AB_IDX].register_address;
             shadow_register = &TMC7300_reg_data[PWM_AB_IDX].shadow_value; 
             switch (RW_mode) {
@@ -255,6 +237,9 @@ uint32_t tmp_value, target_register, *shadow_register;
             break;
         }
         case SET_PWM_B : {
+            if (abs(value > 100)) {
+                return BAD_PWM_PERCENT;
+            }
             target_register = TMC7300_reg_data[PWM_AB_IDX].register_address;
             shadow_register = &TMC7300_reg_data[PWM_AB_IDX].shadow_value;
             switch (RW_mode) {
@@ -299,12 +284,42 @@ uint32_t tmp_value, target_register, *shadow_register;
     }   // end command switch
 }
 
+//==============================================================================
+// set_master_slave_delay
+//==============================================================================
 /**
- * @brief compute absolute valus of a 32 bit integer
+ * @brief 
  * 
- * @param value 
- * @return int32_t 
+ *
+ * @brief set delay between recieving a read datagram and sending a reply
+ * 
+ * @param[in]   delay in units of UART bit times 
+ * @return      no value returned
+ * 
  */
-int32_t abs_int32(int32_t value) {
-    return ((value < 0) ? -value : value);
+void set_master_slave_delay(uint32_t bit_times) {
+
+uint32_t  tmp_bit_times, master_slave_delay;
+
+    tmp_bit_times = bit_times;
+    if (bit_times > BIT_TIMES_MAX) {
+        tmp_bit_times = BIT_TIMES_MAX;
+    }
+    tmp_bit_times = tmp_bit_times & 0xFFFFFFF8;
+
+    master_slave_delay = (((1000000 * tmp_bit_times) / BAUD_RATE) << TMC7300_SLAVECONF_SHIFT);
+
+    create_write_datagram(&write_datagram, TMC7300_SLAVECONF, (uint8_t)master_slave_delay);
+    TMC7300_write_reg(&write_datagram);
 }
+
+
+// /* *
+//  * @brief compute absolute valus of a 32 bit integer
+//  * 
+//  * @param value 
+//  * @return int32_t 
+//  */
+// int32_t abs_int32(int32_t value) {
+//     return ((value < 0) ? -value : value);
+// }

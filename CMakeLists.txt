@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
+file(TO_CMAKE_PATH "$ENV{PICO_SDK_PATH}" PICO_SDK_PATH_CMAKE)
+
 # Pull in SDK (must be before project)
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
@@ -19,13 +21,15 @@ add_executable(${PROJECT_NAME}
         Robokid_test.c
         OLED_128X64.c
         TMC7300.c
+        ${PICO_SDK_PATH_CMAKE}/lib/tinyusb/src/tusb.c
         )
 
 # include directories
 #target_include_directories(${PROJECT_NAME} PUBLIC $ENV{PICO_SDK_PATH}/include)        
+target_include_directories(${PROJECT_NAME} PUBLIC $ENV{PICO_SDK_PATH}/lib/tinyusb/src)        
 
 # Pull in our pico_stdlib which pulls in commonly used features
-target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_spi)
+target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_spi tinyusb_board tinyusb_host)
 
 # create map/bin/hex file etc.
 pico_add_extra_outputs(${PROJECT_NAME})

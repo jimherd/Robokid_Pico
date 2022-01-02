@@ -32,8 +32,12 @@
 //==============================================================================
 // Error codes
 //==============================================================================
-#define     OK           0
-#define     CRC_ERROR   -1
+
+typedef enum { NO_ERROR         =  0, 
+               BAD_MOTOR_NUMBER = -1, 
+               BAD_PWM_PERCENT  = -2,
+               CRC_ERROR        = -3,
+} TMC7300_errors_t;
 
 //==============================================================================
 // Macros
@@ -102,7 +106,6 @@ static const uint32_t TMC7300_init_data[] = {
 typedef enum { READ_CMD, WRITE_CMD } RW_mode_t;
 typedef enum { READ_ONLY, READ_WRITE, WRITE_ONLY } reg_access_t;
 typedef enum { SET_PWM_A, SET_PWM_B, SET_SEND_DELAY } command_t;
-typedef enum { NO_ERROR=0, BAD_MOTOR_NUMBER, BAD_PWM_PERCENT } TMC7300_errors_t;
 
 //==============================================================================
 // datagram typedef definitions
@@ -143,15 +146,15 @@ typedef struct register_data {
 // Function prototypes.
 //==============================================================================
 
-void     TMC7300_Init(void);
-void     reset_TMC7300(void);
-void     TMC7300_write_reg(TMC7300_write_datagram_t *datagram);
-int32_t  TMC7300_read_reg(TMC7300_read_datagram_t *datagram, TMC7300_read_reply_datagram_t *reply_datagram);
-uint8_t  TMC7300_CRC8(uint8_t *data, uint32_t bytes);
-void     create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint32_t register_value);
-void     create_read_datagram(TMC7300_read_datagram_t *datagram, uint8_t register_address);
-void     set_master_slave_delay(uint32_t bit_times);
-TMC7300_errors_t execute_cmd(command_t command, RW_mode_t RW_mode, uint32_t value);
-int32_t  abs_int32(int32_t value);
+void              TMC7300_Init(void);
+void              reset_TMC7300(void);
+void              TMC7300_write_reg(TMC7300_write_datagram_t *datagram);
+TMC7300_errors_t  TMC7300_read_reg(TMC7300_read_datagram_t *datagram, TMC7300_read_reply_datagram_t *reply_datagram);
+uint8_t           TMC7300_CRC8(uint8_t *data, uint32_t bytes);
+void              create_write_datagram(TMC7300_write_datagram_t *datagram, uint8_t register_address, uint32_t register_value);
+void              create_read_datagram(TMC7300_read_datagram_t *datagram, uint8_t register_address);
+void              set_master_slave_delay(uint32_t bit_times);
+TMC7300_errors_t  execute_cmd(command_t command, RW_mode_t RW_mode, uint32_t value);
+//int32_t           abs_int32(int32_t value);
 
 #endif
